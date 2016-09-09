@@ -1,7 +1,16 @@
 #!/bin/sh
+# Experience script to connect 3d-shapes libraries and creates/removes links
+# in the path specified in the system variable KISYS3DMOD
+# Executable by root. Key: [-add] [-rm] [-ln]
+
 echo Executable by root
+echo Set the KIUSER3DMOD, KIMY3DMOD, KISYS3DMOD in header this script
+
+# the path to the users 3dshapes-files
 KIUSER3DMOD=~/KiCAD_User/Libraries/strygin_mod/strygin_3d
+# the path to the users mod-files
 KIMY3DMOD=~/KiCAD_User/Libraries/mod
+# system variable
 KISYS3DMOD=/usr/share/kicad/modules/packages3d
 
 if [ ${1} == "-add" ]
