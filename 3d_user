@@ -1,0 +1,28 @@
+#!/bin/sh
+echo Выполнять от root
+KIUSER3DMOD=~/KiCAD_User/Libraries/strygin_mod/strygin_3d
+KIMY3DMOD=~/KiCAD_User/Libraries/mod
+KISYS3DMOD=/usr/share/kicad/modules/packages3d
+
+if [ ${1} == "-add" ]
+then
+for SHAPE_3D in `find ${KIUSER3DMOD} -mindepth 1 -maxdepth 1 -type d`;
+do ln -s ${SHAPE_3D} ${KISYS3DMOD};
+done;
+for SHAPE_3D in `find ${KIMY3DMOD} -mindepth 1 -maxdepth 1 -type d`;
+do ln -s ${SHAPE_3D} ${KISYS3DMOD};
+done;
+fi
+
+if [ ${1} == "-rm" ]
+then
+for SHAPE_3D in `find ${KISYS3DMOD} -mindepth 1 -maxdepth 1 -type l`;
+do rm -f ${SHAPE_3D};
+done;
+fi
+
+if [ ${1} == "-ln" ]
+then
+ln -s ${KIUSER3DMOD} ${KISYS3DMOD};
+ln -s ${KIMY3DMOD} ${KISYS3DMOD};
+fi
