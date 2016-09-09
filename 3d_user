@@ -1,5 +1,5 @@
 #!/bin/sh
-echo Выполнять от root
+echo Executable by root
 KIUSER3DMOD=~/KiCAD_User/Libraries/strygin_mod/strygin_3d
 KIMY3DMOD=~/KiCAD_User/Libraries/mod
 KISYS3DMOD=/usr/share/kicad/modules/packages3d
