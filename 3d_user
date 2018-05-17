@@ -1,4 +1,7 @@
 #!/bin/sh
+# Attention!
+# This script is left for the case when other ways to configure custom
+# model libraries for kicad are not possible.
 # Experience script to connect 3d-shapes libraries and creates/removes links
 # in the path specified in the system variable KISYS3DMOD
 # Executable by root. Key: [-add] [-rm] [-ln]
